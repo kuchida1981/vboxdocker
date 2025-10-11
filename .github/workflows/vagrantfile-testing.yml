@@ -11,14 +11,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
-
-      - name: install vagrant
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y vagrant
+      - uses: ./.github/actions/setup-vagrant # カスタムアクションを呼び出す
 
       - name: run test
         run: vagrant validate
