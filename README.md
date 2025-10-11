@@ -29,7 +29,7 @@ Vagrant, VirtualBox, Docker, Systemd にそれなりに習熟した人向け.
 リポジトリをチェックアウトする
 
 ```
-git checkout https://github.com/kuchida1981/vboxdocker
+git clone https://github.com/kuchida1981/vboxdocker
 ```
 
 インストールする.
