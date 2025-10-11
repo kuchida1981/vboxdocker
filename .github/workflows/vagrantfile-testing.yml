@@ -9,14 +9,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup_env:
-    uses: ./.github/workflows/setup-vagrant.yml
-
   test:
-    needs: setup_env
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-vagrant # カスタムアクションを呼び出す
 
       - name: run test
         run: vagrant validate
