@@ -2,10 +2,6 @@ name: Setup Vagrant and VirtualBox
 
 on:
   workflow_call:
-    outputs:
-      os:
-        description: "Operating system of the runner"
-        value: ${{ jobs.setup.outputs.os }}
 
 jobs:
   setup:
