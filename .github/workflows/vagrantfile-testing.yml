@@ -13,7 +13,6 @@ jobs:
     uses: ./.github/workflows/setup-vagrant.yml
     with:
       os: ubuntu-latest
-    secrets: inherit # 必要に応じてsecretsを継承
 
   test:
     needs: setup_env
